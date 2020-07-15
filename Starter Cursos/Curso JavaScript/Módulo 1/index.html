@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Desafio - Módulo 1</title>
+    </head>
+    <body class="container">
+        <br> <center><h1>Exercícios - Módulo <span class="badge badge-dark">1</span></h1></center> <br> 
+
+        <h2>Exercício <span class="badge badge-dark">1</span></h2>
+        <p>Digite seu Endereço</p>
+        <form>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valRua" class="form-control" placeholder="Rua">
+                </div>
+                <div class="col">
+                    <input type="text" id="valBairro" class="form-control" placeholder="Bairro">
+                </div>
+            </div> 
+            <br>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valNum" class="form-control" placeholder="Número">
+                </div>
+                <div class="col">
+                    <input type="text" id="valCidade" class="form-control" placeholder="Cidade">
+                </div>
+                <div class="col">
+                    <input type="text" id="valUf" class="form-control" placeholder="UF">
+                </div>
+            </div> <br>
+            <button type="submit" class="btn btn-dark btn-block" onclick="exer1()">Confirmar</button> 
+        </form> 
+        
+        <hr> 
+
+        <h2>Exercício <span class="badge badge-dark">2</span></h2>
+        <p>Digite um intervalo de números e descubra os números pares</p>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valX" class="form-control" placeholder="Início do Intervalo">
+                </div>
+                <div class="col">
+                    <input type="text" id="valY" class="form-control" placeholder="Final do Intervalo">
+                </div>
+            </div> <br>
+            <button type="submit" class="btn btn-dark btn-block" onclick="exer2()">Confirmar</button> 
+        </form> 
+
+        <hr>
+
+        <h2>Exercício <span class="badge badge-dark">3</span></h2>
+        <p>Digite 3 habilidades</p>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valHab1" class="form-control" placeholder="Habilidade 1">
+                </div>
+                <div class="col">
+                    <input type="text" id="valHab2" class="form-control" placeholder="Habilidade 2">
+                </div>
+                <div class="col">
+                    <input type="text" id="valHab3" class="form-control" placeholder="Habilidade 3">
+                </div>
+            </div> <br>
+            <button type="submit" class="btn btn-dark btn-block" onclick="exer3()">Confirmar</button> 
+        </form> 
+
+        <hr>
+
+        <h2>Exercício <span class="badge badge-dark">4</span></h2>
+        <p>Digite quantos anos de estudo você tem</p>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valAnos" class="form-control" placeholder="Anos de Estudo">
+                </div>
+            </div> <br>
+            <button type="submit" class="btn btn-dark btn-block" onclick="exer4()">Confirmar</button> 
+        </form> 
+
+        <hr>
+
+        <h2>Exercício <span class="badge badge-dark">5</span></h2>
+        <p>Digite o nome de 2 usuários e 3 habilidades deles</p>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valUser1" class="form-control" placeholder="Nome do Usuário 1">
+                </div>
+            </div> <br>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valHab1User1" class="form-control" placeholder="Habilidade 1">
+                </div>
+                <div class="col">
+                    <input type="text" id="valHab2User1" class="form-control" placeholder="Habilidade 2">
+                </div>
+                <div class="col">
+                    <input type="text" id="valHab3User1" class="form-control" placeholder="Habilidade 3">
+                </div>
+            </div> <br>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valUser2" class="form-control" placeholder="Nome do Usuário 2">
+                </div>
+            </div> <br>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="valHab1User2" class="form-control" placeholder="Habilidade 1">
+                </div>
+                <div class="col">
+                    <input type="text" id="valHab2User2" class="form-control" placeholder="Habilidade 2">
+                </div>
+                <div class="col">
+                    <input type="text" id="valHab3User2" class="form-control" placeholder="Habilidade 3">
+                </div>
+            </div> <br>
+            <button type="submit" class="btn btn-dark btn-block" onclick="exer5()">Confirmar</button> <br>
+        </form> 
+
+        <script>
+            function exer1(){
+                var endereco = {
+                    rua: document.getElementById("valRua").value,
+                    numero: document.getElementById("valNum").value,
+                    bairro: document.getElementById("valBairro").value,
+                    cidade: document.getElementById("valCidade").value,
+                    uf: document.getElementById("valUf").value
+                };
+
+                if(endereco.rua !== "" && endereco.numero !== "" && endereco.bairro !== "" && endereco.cidade !== "" && endereco.rua !== ""){
+                    return alert("O usuário mora em "+ endereco.cidade + " / "+ endereco.uf +", no bairro "+ endereco.bairro +", na rua '"+ endereco.rua +"' com nº "+ endereco.numero +".");
+                }    
+
+                return alert("Complete todos os campos!");
+            }
+
+            function exer2(){ 
+                var intervalo = {
+                    inicio: parseInt(document.getElementById("valX").value),
+                    fim: parseInt(document.getElementById("valY").value)
+                };
+
+                var pares = [];
+
+                for(var i = intervalo.inicio; i <= intervalo.fim; i++){
+                    if(i % 2 === 0){
+                        pares.push(i);
+                    }
+                }
+
+                if(pares.length > 0){
+                    return alert("Os números pares desse intervalo são: "+ pares.toString());
+                } 
+                
+                return alert("Não existe pares nesse intervalo!");
+            }
+
+            function exer3(){
+                var habilidades = [
+                    document.getElementById("valHab1").value, 
+                    document.getElementById("valHab2").value, 
+                    document.getElementById("valHab3").value
+                ];
+
+                if(habilidades.indexOf("Javascript") >= 0){
+                    return alert("Tem a habilidade! 'Javascript'");
+                }
+
+                return alert("Não tem a habilidade :( 'Javascript'");
+            }
+
+            function exer4(){
+                var anosEst = parseInt(document.getElementById("valAnos").value);
+
+                if(anosEst === 0 || anosEst === 1){
+                    return alert("Iniciante!");
+                } else {
+                    if(anosEst > 1 && anosEst <= 3){
+                        return alert("Intermediário!");
+                    } else {
+                        if(anosEst > 3 && anosEst <= 6){
+                            return alert("Avançado!");
+                        } else {
+                            if(anosEst > 6){
+                                return alert("Jedi Master!");
+                            } else {
+                                return alert("Coloque um número positivo.");
+                            }
+                        }
+                    }
+                }
+            }
+
+            function exer5(){
+                var usuarios = [
+                    {
+                        nome: document.getElementById("valUser1").value,
+                        habilidades: [document.getElementById("valHab1User1").value, document.getElementById("valHab2User1").value, document.getElementById("valHab3User1").value]
+                    },
+                    {
+                        nome: document.getElementById("valUser2").value,
+                        habilidades: [document.getElementById("valHab1User2").value, document.getElementById("valHab2User2").value, document.getElementById("valHab3User2").value]   
+                    }
+                ];
+
+                if(usuarios[0].nome === "" || usuarios[1].nome === "" || usuarios[0].habilidades.indexOf("") > -1 || usuarios[1].habilidades.indexOf("") > -1){
+                    return alert("Complete os nomes dos usuários e/ou habilidades!");
+                } else {
+                    for (const iterator of usuarios) {
+                        alert("O " + iterator.nome + " possui as habilidades: "+ iterator.habilidades.join(', '));
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
