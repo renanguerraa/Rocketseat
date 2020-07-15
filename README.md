@@ -1,2 +1,6 @@
 # Rocketseat
-The challenges at the end of each module, made in a more "dynamic" way
+  The challenges at the end of each module, made in a more "dynamic" way
+
+## The base of the Javascript Course challenges:
+
+  - Module 1: https://xesque.rocketseat.dev/platform/1566498717618.pdf
