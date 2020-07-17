@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Desafio - Módulo 2</title>
+    </head>
+    <body class="container">
+        <br> <center><h1>Exercícios - Módulo <span class="badge badge-dark">2</span></h1></center> <br> 
+
+        <div>
+            <h2>Exercício <span class="badge badge-dark">1</span> e <span class="badge badge-dark">2</span></h2>
+            <p>Digite a altura e a largura e depois passe o mouse pelo quadrado/retangulo criado!</p>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valAltura" class="form-control" placeholder="Altura">
+                </div>
+                <div class="col">
+                    <input type="text" id="valLargura" class="form-control" placeholder="Largura">
+                </div>
+            </div> 
+            <br>
+            <div>
+                <center><div id="result"></div></center>
+            </div>
+            <br>
+            <button id="confirmar1" class="btn btn-dark btn-block">Confirmar</button> 
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Exercício <span class="badge badge-dark">3</span> e <span class="badge badge-dark">4</span></h2>
+            <p>Digite algo para adicionar na lista e clique em cima do item para removê-lo!</p>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valNome" class="form-control" placeholder="Digite algo">
+                </div>
+            </div>
+            <br>
+            <div>
+                <ul class="list-group">
+                </ul>
+            </div>
+            <br>
+            <button id="confirmar2" class="btn btn-dark btn-block">Confirmar</button> 
+        </div>  
+
+        <script>
+            var botao1 = document.querySelector("#confirmar1");
+
+            botao1.onclick = function() {
+                var forma = document.querySelector("#result");
+                var altura = document.querySelector("#valAltura");
+                var largura = document.querySelector("#valLargura");
+
+                if(largura.value !== "" || altura.value !== ""){
+                    forma.style.width = largura.value + "px";
+                    forma.style.height = altura.value + "px";
+                    forma.style.backgroundColor = "#f00";
+
+                    forma.onmouseover = function() {
+                        var letters = "0123456789ABCDEF";
+                        var color = "#";
+                        for (var i = 0; i < 6; i++) {
+                            color += letters[Math.floor(Math.random() * 16)];
+                        }
+                        return forma.style.backgroundColor = color;
+                    }
+                } else {
+                    alert("Complete todos os campos!");
+                }
+            }
+
+            var botao2 = document.querySelector("#confirmar2");
+
+            botao2.onclick = function() {
+                var text = document.querySelector("#valNome");
+
+                if(text.value !== ""){
+                    var lista = document.querySelector(".list-group");
+                    var novoItem = document.createElement("li")
+                    novoItem.setAttribute("class", "list-group-item")
+                    novoItem.appendChild(document.createTextNode("● " + text.value));
+
+                    lista.appendChild(novoItem);
+
+                    text.value = "";
+
+                    novoItem.onclick = function(){
+                        novoItem.remove();
+                    }
+                } else {
+                    alert("Complete o campo!");
+                }
+            }
+        </script>
+       
+    </body>
+</html>
