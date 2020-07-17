@@ -4,3 +4,5 @@
 ## The base of the Javascript Course challenges:
 
   - Module 1: https://xesque.rocketseat.dev/platform/1566498717618.pdf
+
+  - Module 2: https://xesque.rocketseat.dev/platform/1566499161406.pdf
