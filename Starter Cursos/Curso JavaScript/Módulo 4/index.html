@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Desafio - Módulo 4</title>
+    </head>
+    <body class="container">
+        <br> <center><h1>Exercícios - Módulo <span class="badge badge-dark">4</span></h1></center> <br>
+        
+        <div id="exer1">
+            <h2>Exercício <span class="badge badge-dark">1</span></h2>
+            <p>Digite sua idade e espere 2 segundos!</p>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valIdade" class="form-control" placeholder="Idade">
+                </div>
+            </div> 
+            <br>
+            <button id="confirmar1" class="btn btn-dark btn-block">Confirmar</button>
+        </div>
+
+        <hr>
+
+        <div id="exer2">
+            <h2>Exercício <span class="badge badge-dark">2</span> e <span class="badge badge-dark">3</span></h2>
+            <p>Digite o nome de um usuário no GitHub e veja seus repositórios!</p>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valUser" class="form-control" placeholder="Nome do Usuário">
+                </div>
+            </div> 
+            <br>
+            <div>
+                <ul class="list-group" id="repos"> </ul>
+            </div>
+            <br>
+            <button id="confirmar2" class="btn btn-dark btn-block">Confirmar</button>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
