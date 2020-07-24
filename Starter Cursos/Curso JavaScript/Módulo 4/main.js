@@ -14,7 +14,6 @@ buttonElement.onclick = function() {
 
         function checarIdade(idade){
             return new Promise(function(resolve, reject){
-                window.setTimeout(2000);
                 if(idade >= 18){
                     resolve("Maior que 18 anos!");
                 } else {
