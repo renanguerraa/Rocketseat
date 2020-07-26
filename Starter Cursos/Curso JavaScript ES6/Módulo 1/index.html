@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Desafio - Módulo 1</title>
+    </head>
+    <body class="container">
+        <br> <center><h1>Exercícios - Módulo <span class="badge badge-dark">1</span></h1></center> <br>
+        
+        <div id="exer1">
+            <h2>Exercício <span class="badge badge-dark">1, 3</span></h2>
+            <p>Cadastre usuários e defina se eles serão Usuários ou Administradores e depois cheque!</p>
+
+            <h6>Cadastro</h6>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valEmail" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="col">
+                    <input type="text" id="valSenha" class="form-control" placeholder="Senha">
+                </div>
+            </div>
+            <br>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="valAdm">
+                <label class="form-check-label">Admistrador</label>
+            </div> 
+            <button id="cadastrar" class="btn btn-dark btn-block">Cadastrar</button>
+
+            <br>
+
+            <h6>Checagem</h6>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valEmail2" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="col">
+                    <input type="text" id="valSenha2" class="form-control" placeholder="Senha">
+                </div>
+            </div>
+            <br>
+            <button id="checar" class="btn btn-dark btn-block">Checar</button>
+        </div>
+
+        <hr>
+
+        <div id="exer2">
+            <h2>Exercício <span class="badge badge-dark">2, 3, 4,  6 </span> e <span class="badge badge-dark">7</span></h2>
+            <p>Cadastre usuários e depois filtre-os!</p>
+
+            <h6>Cadastro</h6>
+            <div class="form-row"> 
+                <div class="col">
+                    <input type="text" id="valNome" class="form-control" placeholder="Nome">
+                </div>
+                <div class="col">
+                    <input type="text" id="valIdade" class="form-control" placeholder="Idade">
+                </div>
+                <div class="col">
+                    <input type="text" id="valEmpresa" class="form-control" placeholder="Empresa">
+                </div>
+            </div>
+            <br>
+            <button id="cadastrar2" class="btn btn-dark btn-block">Cadastrar</button>
+
+            <br>
+
+            <div id="filtros" hidden>
+                <h6>Filtrar por idade</h6>
+                <div class="form-row"> 
+                    <div class="col">
+                        <input type="text" id="valIdadeMin" class="form-control" placeholder="Idade Mínima">
+                    </div>
+                    <div class="col">
+                        <input type="text" id="valIdadeMax" class="form-control" placeholder="Idade Máxima">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <ul class="list-group" id="lista1"> </ul>
+                </div>
+                <br>
+                <button id="filtrar1" class="btn btn-dark btn-block">Filtrar</button>
+
+                <br>
+
+                <h6>Filtrar por Empresa</h6>
+                <div class="form-row"> 
+                    <div class="col">
+                        <input type="text" id="valEmpresa2" class="form-control" placeholder="Nome da Empresa">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <ul class="list-group" id="lista2"> </ul>
+                </div>
+                <br>
+                <button id="filtrar2" class="btn btn-dark btn-block">Filtrar</button>
+
+                <br>
+
+                <h6>Filtrar por Empresa e Idade</h6>
+                <div class="form-row"> 
+                    <div class="col">
+                        <input type="text" id="valEmpresa3" class="form-control" placeholder="Nome da Empresa">
+                    </div>
+                    <div class="col">
+                        <input type="text" id="valIdade3" class="form-control" placeholder="Idade Mínima">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <ul class="list-group" id="lista3"> </ul>
+                </div>
+                <br>
+                <button id="filtrar3" class="btn btn-dark btn-block">Filtrar</button> <br>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
