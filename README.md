@@ -7,10 +7,10 @@
 
   - Module 2: https://xesque.rocketseat.dev/platform/1566499161406.pdf
   
-  - Module 3: Without Challenges :c
-  
   - Module 4: https://xesque.rocketseat.dev/platform/1566499182493.pdf
   
 ## The base of the ES6 Javascript Course challenges:
 
   - Module 1: https://xesque.rocketseat.dev/platform/1566499229316.pdf
+  
+  - Module 3: https://xesque.rocketseat.dev/platform/1566499323808.pdf
